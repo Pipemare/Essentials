@@ -1,6 +1,6 @@
 //Maya ASCII 2026 scene
 //Name: Interior Room Scene Pablo Parra-Lopez.ma
-//Last modified: Tue, Mar 17, 2026 11:02:39 PM
+//Last modified: Tue, Mar 17, 2026 11:51:45 PM
 //Codeset: 1252
 file -rdi 1 -ns "CupPablo" -rfn "CupPabloRN" -op "v=0;" -typ "mayaAscii" "C:/GitHub/Essentials/DAGV1100and1200/Maya//scenes/CupPablo.ma";
 file -rdi 1 -ns "CupPablo1" -dr 1 -rfn "CupPabloRN1" -op "v=0;" -typ "mayaAscii"
@@ -37,12 +37,12 @@ fileInfo "product" "Maya 2026";
 fileInfo "version" "2026";
 fileInfo "cutIdentifier" "202510291147-60ec9eda33";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 26200)";
-fileInfo "UUID" "22284819-47F8-9327-9166-EBBD4A866E24";
+fileInfo "UUID" "512062AE-4451-9FA3-A9A9-3C88C96ABBC1";
 createNode transform -s -n "persp";
 	rename -uid "103299AA-46BE-DE1F-1635-74B2B466159C";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 53.350474953840411 18.607513817011473 23.143349536802042 ;
-	setAttr ".r" -type "double3" -15.93835271229908 -653.39999999998736 4.004244711436726e-15 ;
+	setAttr ".t" -type "double3" 71.34347700140323 41.920826797804111 66.688726579325817 ;
+	setAttr ".r" -type "double3" -16.538352712284532 -679.79999999994993 -2.082070711438111e-15 ;
 	setAttr ".rp" -type "double3" 0 -5.5511151231257827e-16 0 ;
 	setAttr ".rpt" -type "double3" 2.2550347516056079e-16 7.8980733781819094e-17 1.7491842535353798e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -50,11 +50,11 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".pze" yes;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 50.569213582171869;
+	setAttr ".coi" 102.28586213131757;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 8.7244568905898277 4.7210596637795916 3.8319470712134494 ;
+	setAttr ".tp" -type "double3" 8.053617069307597 12.804430235577017 -8.2047088670051718 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "53BC49A1-488E-2C56-9C04-19A87B227F7F";
@@ -8955,8 +8955,8 @@ createNode reference -n "Unit4_CurvesLab_PabloParraLopezRN1";
 		"Unit4_CurvesLab_PabloParraLopezRN1.placeHolderList[1]" "Unit4_CurvesLab_PabloParraLopez2:standardSurface1SG.dsm";
 lockNode -l 1 ;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 63;
+	setAttr ".unw" 63;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
@@ -8983,7 +8983,7 @@ select -ne :openPBR_shader1;
 	setAttr ".bc" -type "float3" 0.7368421 0.7368421 0.7368421 ;
 	setAttr ".sr" 0.5;
 select -ne :initialShadingGroup;
-	setAttr -s 34 ".dsm";
+	setAttr -s 33 ".dsm";
 	setAttr ".ro" yes;
 	setAttr -s 6 ".gn";
 select -ne :initialParticleSE;
@@ -9008,8 +9008,8 @@ select -ne :hardwareRenderGlobals;
 	setAttr ".btrs" 512;
 select -ne :ikSystem;
 	setAttr -s 4 ".sol";
-connectAttr "Unit4_CurvesLab_PabloParraLopezRN1.phl[1]" ":initialShadingGroup.dsm"
-		 -na;
+connectAttr "Unit4_CurvesLab_PabloParraLopezRN1.phl[1]" "standardSurface2SG.dsm" 
+		-na;
 connectAttr "FloorLyr.di" "FloorMesh.do";
 connectAttr "groupId13.id" "ChairMeshShape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "ChairMeshShape.iog.og[0].gco";
